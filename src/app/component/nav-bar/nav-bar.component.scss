@@ -1,0 +1,94 @@
+@use "../../../assets/var";
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+
+    & .logo {
+        display: flex;
+        align-items: center;
+        & img {
+            width: 4em;
+            margin-right: .5em;
+        }
+        & .logo__name {
+            margin: 0;
+            margin-bottom: -.3em;
+            display: flex;
+            font-size: 1.2em;
+            transition: all .25s ease-in-out;
+            &:hover {
+                color: white;
+                transform: scale(1.1)
+            }
+        }
+    }
+    
+    & .toggle-container {
+        display: flex;
+        align-items: center;
+        transition: all .25s ease-in-out;
+        &:hover {
+            color: white;
+            & .toggle {
+                background-color: white;
+            }
+        }
+        & .toggle {
+            transition: all .25s ease-in-out;
+            width: .3em;
+            height: 2.2em;
+        }
+        & svg {
+            // transition: all .25s ease-in-out;
+            animation-name: flashing;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        & .menu-word-container {
+            overflow: hidden;
+            max-width: -0em;
+            transition: all .25s ease-in-out;
+        }
+    }
+
+    & .menu-open {
+        & .menu-word-container {
+            max-width: 4em;
+            margin-right: .3em;
+        }
+    }
+}
+
+@keyframes flashing {
+    0% {
+        color: var.$color_light;
+    }
+    5% {
+        color: var.$color_dark;
+    }
+    25% {
+        color: var.$color_light;
+    }
+    30% {
+        color: var.$color_dark;
+    }
+    35% {
+        color: var.$color_light;
+    }
+    40% {
+        color: var.$color_dark;
+    }
+    45% {
+        color: var.$color_light;
+    }
+    50% {
+        color: var.$color_dark;
+    }
+    100% {
+        color: var.$color_light;
+    }
+}

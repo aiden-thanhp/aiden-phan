@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./assets/var";
+
+body {
+    margin: 0;
+    .text-light {
+        color: var.$color_light;
+    }
+    .text-white {
+        color: white;
+    }
+    .text-blue {
+        color: var.$color_blue;
+    }
+    .font-heading {
+        font-family: var.$font_bebas_neue;
+    }
+    .bg-dark {
+        background-color: var.$color_dark;
+    }
+    .bg-light {
+        background-color: var.$color_light;
+    }
+    .bg-secondary {
+        background-color: var.$color_secondary;
+    }
+    .cursor-pointer {
+        cursor: pointer;
+    }
+}
