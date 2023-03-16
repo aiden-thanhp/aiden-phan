@@ -1,4 +1,7 @@
 .menu {
+    .site {
+        display: none
+    }
     padding: 1.8em .5em 1.8em .5em;
     & .horizontal-line {
         width: 100%;
@@ -23,19 +26,57 @@
 
     & .socials {
         margin-top: 1em;
-
+        margin-left: 1.7em;
         & .socials-item {
-            width: 1.8em;
-            height: 1.8em;
-            border-radius: 50%;
-            transition: all .25s ease-in-out;
-            &:hover {
-                background-color: white;
+            & img {
+                width: 1.3em;
+                margin-left: .3em;
+                padding: .2em;
+                border-radius: 50%;
+                transition: all .25s ease-in-out;
+                &:hover {
+                    background-color: white;
+                }
             }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .menu {
+        & .link {
+            text-align: center;
+        }
+        & .socials {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        & .site {
+            margin-top: -1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2em;
+            cursor: pointer;
             & a {
-                margin: auto;
-                & img {
-                    width: 80%;
+                text-decoration: none;
+            }
+            &:hover {
+                & div .logo__name {
+                    color: white;
+                }
+            }
+            & img {
+                width: 5em;
+                margin-bottom: -1em;
+            }
+            & div {
+                & .logo__name {
+                    margin: 0;
+                    margin-bottom: -.3em;
+                    text-align: center;
+                    font-size: 1.2em;
+                    transition: all .25s ease-in-out;
                 }
             }
         }

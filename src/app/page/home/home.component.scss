@@ -1,0 +1,9 @@
+.home {
+    padding: .5em 1em .5em 1em;
+}
+
+@media only screen and (min-width: 768px) {
+    .home {
+        padding: .5em 2em .5em 2em;
+    }
+}

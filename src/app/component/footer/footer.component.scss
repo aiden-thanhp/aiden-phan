@@ -1,0 +1,52 @@
+footer {
+    padding: 1em;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & .sites-container {
+        display: flex;
+        gap: 1em;
+        & .site {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            & a {
+                text-decoration: none;
+            }
+            &:hover {
+                & div .logo__name {
+                    color: white;
+                }
+            }
+            & img {
+                width: 5em;
+                margin-bottom: -1em;
+            }
+            & div {
+                & .logo__name {
+                    margin: 0;
+                    margin-bottom: -.3em;
+                    text-align: center;
+                    font-size: 1.2em;
+                    transition: all .25s ease-in-out;
+                }
+            }
+        }
+    }
+    & .legal {
+        font-size: .7em;
+        margin-top: 2em;
+        letter-spacing: .1em;
+        & span {
+            cursor: pointer;
+            transition: all .25s ease-in-out;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}

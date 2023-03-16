@@ -1,6 +1,11 @@
 .main-container {
     max-width: 100vw;
     transition: all .25s ease-in-out;
+    & main {
+        position: relative;
+        z-index: 100;
+        background-color: white;
+    }
 }
 
 .side-menu {
@@ -21,5 +26,30 @@
 
     & .side-menu {
         transform: translateX(0%)
+    }
+}
+
+.side-menu-md {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .side-menu-md {
+        display: block;
+        position: fixed;
+        top: 10%;
+        left: 0;
+        z-index: 100;
+        width: 10em;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        opacity: 0.4;
+        transform: translateX(-90%);
+        transition: all .25s ease-in-out;
+        transition-delay: transform .25s;
+        cursor: pointer;
+        &:hover {
+            opacity: 1;
+            transform: translateX(0%)
+        }
     }
 }
