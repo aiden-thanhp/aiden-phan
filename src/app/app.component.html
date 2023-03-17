@@ -1,17 +1,24 @@
-<div id="body-container" class="body-container">
-    <div id="main-container" class="main-container">
-        <main>
-            <app-nav-bar></app-nav-bar>
-            <router-outlet></router-outlet>
-        </main>
-        <app-footer></app-footer>
-    </div>
-
-    <div id="side-menu" class="side-menu bg-secondary">
-        <app-side-menu></app-side-menu>
-    </div>
-
-    <div id="side-menu-md" class="side-menu-md bg-secondary">
-        <app-side-menu></app-side-menu>
-    </div>
+<div *ngIf="this.admin; else isNotAdmin">
+    <app-admin-navbar></app-admin-navbar>
+    <router-outlet></router-outlet>
 </div>
+
+<ng-template #isNotAdmin>
+    <div id="body-container" class="body-container">
+        <div id="main-container" class="main-container">
+            <main>
+                <app-nav-bar></app-nav-bar>
+                <router-outlet></router-outlet>
+            </main>
+            <app-footer></app-footer>
+        </div>
+    
+        <div id="side-menu" class="side-menu bg-secondary">
+            <app-side-menu></app-side-menu>
+        </div>
+    
+        <div id="side-menu-md" class="side-menu-md bg-secondary">
+            <app-side-menu></app-side-menu>
+        </div>
+    </div>
+</ng-template>

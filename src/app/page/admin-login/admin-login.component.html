@@ -1,0 +1,18 @@
+<div class="login">
+    <form class="bg-light" [formGroup]="loginForm" (submit)="this.onLogin($event)">
+        <h3 class="font-heading">Login Form</h3>
+        <p *ngIf="this.error" id="error" class="font-main error">Credentials Incorrect!</p>
+        <p *ngIf="this.success" id="error" class="font-main success">Login Successful!</p>
+        <div class="font-main">
+            <label>Username</label>
+            <input type="text" formControlName="username" required />
+        </div>
+    
+        <div class="font-main">
+            <label>Password</label>
+            <input type="password" formControlName="password" required />
+        </div>
+
+        <button class="font-main bg-dark text-white" type="submit">Login</button>
+    </form>
+</div>

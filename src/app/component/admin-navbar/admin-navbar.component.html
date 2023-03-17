@@ -1,0 +1,11 @@
+<nav class="bg-dark nav-bar">
+    <div>
+        <button *ngIf="this.adminLogin">Log Out</button>
+    </div>
+
+    <ul>
+        <li class="font-heading text-light" *ngFor="let menu of this.menus">
+            {{ menu.name }}
+        </li>
+    </ul>
+</nav>

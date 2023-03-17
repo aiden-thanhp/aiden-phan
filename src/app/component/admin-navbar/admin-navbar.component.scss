@@ -1,0 +1,28 @@
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1em;
+    & ul {
+        display: flex;
+        gap: 1em;
+        list-style: none;
+        & li {
+            font-size: 1.2em;
+            transition: all .25s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .nav-bar {
+        padding: 1em 2em 1em 2em;
+    }
+}

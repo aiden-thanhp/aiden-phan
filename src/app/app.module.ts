@@ -8,6 +8,10 @@ import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { SideMenuComponent } from './component/side-menu/side-menu.component';
 import { CapitalizePipe } from './pipe/capitalize/capitalize.pipe';
 import { FooterComponent } from './component/footer/footer.component';
+import { AdminComponent } from './page/admin/admin.component';
+import { AdminLoginComponent } from './page/admin-login/admin-login.component';
+import { AdminNavbarComponent } from './component/admin-navbar/admin-navbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { FooterComponent } from './component/footer/footer.component';
     NavBarComponent,
     SideMenuComponent,
     CapitalizePipe,
-    FooterComponent
+    FooterComponent,
+    AdminComponent,
+    AdminLoginComponent,
+    AdminNavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
