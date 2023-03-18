@@ -8,10 +8,13 @@ import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { SideMenuComponent } from './component/side-menu/side-menu.component';
 import { CapitalizePipe } from './pipe/capitalize/capitalize.pipe';
 import { FooterComponent } from './component/footer/footer.component';
-import { AdminComponent } from './page/admin/admin.component';
-import { AdminLoginComponent } from './page/admin-login/admin-login.component';
 import { AdminNavbarComponent } from './component/admin-navbar/admin-navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ContactComponent } from './page/contact/contact.component';
+import { VaultComponent } from './page/vault/vault.component';
+import { CorpsComponent } from './page/corps/corps.component';
+import { AboutComponent } from './page/about/about.component';
+import { AppsComponent } from './page/apps/apps.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +24,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     SideMenuComponent,
     CapitalizePipe,
     FooterComponent,
-    AdminComponent,
-    AdminLoginComponent,
-    AdminNavbarComponent
+    AdminNavbarComponent,
+    ContactComponent,
+    VaultComponent,
+    CorpsComponent,
+    AboutComponent,
+    AppsComponent
   ],
   imports: [
     BrowserModule,
